@@ -62,30 +62,4 @@ public class TaskImpl implements Task {
         imageService.saveMatToFile(imageName, mat);
 
     }
-
-
-/*
-    @Override
-    public void task4(String path, int dx, int dy) {
-        Size size = new Size(dx, dy);
-        Mat image = Imgcodecs.imread(path);
-        Mat newImage = new Mat();
-
-        Mat mat = imageService.baseBlur(image, image, size);
-        imageService.showImageByBufferedImage(imageService.matToBufferedImage(mat));
-        imageService.saveMatToFile("Blur", mat);
-
-        Mat matGaussian = imageService.gaussianBlur(mat, mat, size, 90, 90, 2);
-        imageService.showImageByBufferedImage(imageService.matToBufferedImage(matGaussian));
-        imageService.saveMatToFile("Gaussian", matGaussian);
-
-        Mat median = imageService.medianBlur(matGaussian, matGaussian, dx);
-        imageService.showImageByBufferedImage(imageService.matToBufferedImage(median));
-        imageService.saveMatToFile("Median", median);
-
-        Mat bilateral = imageService.bilateralFilter(median, newImage, 15, 80, 80, Core.BORDER_DEFAULT);
-        imageService.showImageByBufferedImage(imageService.matToBufferedImage(bilateral));
-        imageService.saveMatToFile("Bilateral", bilateral);
-    }
-*/
 }
